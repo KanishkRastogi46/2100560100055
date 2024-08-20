@@ -14,7 +14,7 @@ router.get('/:companyname/category/:categoryname/products', async (req,res)=>{
         let result = await axios.get(`http://20.244.56.144/test/companies/${companyname}/categories/${categoryname}/products?top=${top}&minPrice=${minPrice}&maxPrice=${maxPrice}`, 
         {
             headers: {
-              Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzI0MTcwMjQwLCJpYXQiOjE3MjQxNjk5NDAsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImMyYjQ3NTc3LWIzMGMtNGViMS04MjBmLWM5N2NhMmExN2FiNSIsInN1YiI6ImthbmlzaGtyYXN0b2dpNDZAZ21haWwuY29tIn0sImNvbXBhbnlOYW1lIjoiYTJ6LWNvbW0iLCJjbGllbnRJRCI6ImMyYjQ3NTc3LWIzMGMtNGViMS04MjBmLWM5N2NhMmExN2FiNSIsImNsaWVudFNlY3JldCI6IkhLbWlKRm95QWdaZlJsZWUiLCJvd25lck5hbWUiOiJLYW5pc2hrIFJhc3RvZ2kiLCJvd25lckVtYWlsIjoia2FuaXNoa3Jhc3RvZ2k0NkBnbWFpbC5jb20iLCJyb2xsTm8iOiIyMTAwNTYwMTAwMDU1In0.0JW37coSKaIascPhuTMulizU4tAciebKJHgzg712Iko`
+              Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
             }
         });
 
